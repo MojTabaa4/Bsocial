@@ -1,2 +1,6 @@
 from django.contrib import admin
-# Register your models here.
+
+
+@admin.register
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ['username', 'date_of_birth', 'photo']
